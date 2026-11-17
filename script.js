@@ -1,5 +1,5 @@
 // Update this URL if your FastAPI backend is hosted somewhere else.
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://loan-prediction-system-lfz6.onrender.com";
 
 const form = document.getElementById("loanForm");
 const submitBtn = document.getElementById("submitBtn");
