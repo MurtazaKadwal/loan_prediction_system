@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f1eb" />
+  <title>Forma — Loan Eligibility</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Forma home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>forma<span class="brand-dot">.</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="secure"><span class="secure-dot"></span> PRIVATE &amp; SECURE</span>
+        <span class="topbar-divider"></span>
+        <span class="topbar-caption">LOAN INSIGHT TOOL</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A clearer way forward</div>
+        <h1>Make your next<br><em>move with confidence.</em></h1>
+        <p class="intro-copy">A thoughtful first look at your loan eligibility. Share a few details and receive an instant model-based estimate.</p>
+        <div class="intro-meta">
+          <span><span class="meta-icon">✳</span> Takes about 2 minutes</span>
+          <span><span class="meta-icon">↗</span> Instant estimate</span>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="form-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="section-kicker">YOUR PROFILE</div>
+              <h2>Let's get to know you.</h2>
+              <p>Enter your details as accurately as possible.</p>
+            </div>
+            <div class="step-count"><span>01</span><i>/</i> 01</div>
+          </div>
+
+          <form id="loanForm">
+            <div class="form-section">
+              <div class="section-title"><span class="section-number">01</span><span>Personal details</span></div>
+              <div class="fields two-col">
+                <label class="field">
+                  <span>Gender</span>
+                  <select name="Gender" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option>Male</option><option>Female</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Marital status</span>
+                  <select name="Married" required>
+                    <option value="" disabled selected>Select status</option>
+                    <option>Yes</option><option>No</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Dependents</span>
+                  <select name="Dependents" required>
+                    <option value="" disabled selected>Number of dependents</option>
+                    <option value="0">0</option><option value="1">1</option>
+                    <option value="2">2</option><option value="3">3</option><option value="4">3+</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Education</span>
+                  <select name="Education" required>
+                    <option value="" disabled selected>Select education</option>
+                    <option>Graduate</option><option>Not Graduate</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Self employed</span>
+                  <select name="Self_Employed" required>
+                    <option value="" disabled selected>Select option</option>
+                    <option>No</option><option>Yes</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Property area</span>
+                  <select name="Property_Area" required>
+                    <option value="" disabled selected>Select area</option>
+                    <option>Urban</option><option>Semiurban</option><option>Rural</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="section-title"><span class="section-number">02</span><span>Financial details</span></div>
+              <div class="fields two-col">
+                <label class="field">
+                  <span>Applicant income <small>Monthly · ₹</small></span>
+                  <div class="input-wrap"><span class="prefix">₹</span><input name="ApplicantIncome" type="number" min="1" step="any" placeholder="e.g. 50,000" required /></div>
+                </label>
+                <label class="field">
+                  <span>Co-applicant income <small>Monthly · ₹</small></span>
+                  <div class="input-wrap"><span class="prefix">₹</span><input name="CoapplicantIncome" type="number" min="0" step="any" placeholder="e.g. 15,000" required /></div>
+                </label>
+                <label class="field">
+                  <span>Loan amount <small>In thousands</small></span>
+                  <div class="input-wrap"><span class="prefix">₹</span><input name="LoanAmount" type="number" min="0.01" step="any" placeholder="e.g. 120" required /></div>
+                </label>
+                <label class="field">
+                  <span>Loan term <small>In months</small></span>
+                  <div class="input-wrap"><input name="Loan_Amount_Term" type="number" min="1" step="any" placeholder="e.g. 360" required /><span class="suffix">months</span></div>
+                </label>
+                <label class="field full-width">
+                  <span>Credit history</span>
+                  <div class="credit-options">
+                    <label class="radio-card"><input type="radio" name="Credit_History" value="1" required><span class="radio-ui"></span><span><b>Good</b><small>Meets repayment obligations</small></span></label>
+                    <label class="radio-card"><input type="radio" name="Credit_History" value="0" required><span class="radio-ui"></span><span><b>Needs attention</b><small>Past repayment issues</small></span></label>
+                  </div>
+                  <small class="field-hint">Choose the option that best reflects the credit history recorded in your application.</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <div class="privacy-note"><span class="lock">⌑</span><span>Your information is used only to generate this estimate.</span></div>
+              <button type="submit" id="submitBtn"><span class="button-label">Check my eligibility</span><span class="button-arrow">↗</span></button>
+            </div>
+            <p class="form-error" id="formError" role="alert"></p>
+          </form>
+        </div>
+
+        <aside class="side-panel">
+          <div class="side-top">
+            <span class="side-label">THE FORMA APPROACH</span>
+            <div class="orb-wrap"><div class="orb"><span></span></div></div>
+            <h3>Clarity begins<br>with a <em>better view.</em></h3>
+            <p>Understand where you stand before taking your next step. No jargon, just a simple estimate.</p>
+          </div>
+          <div class="side-bottom">
+            <div class="side-stat"><span class="stat-icon">✳</span><div><b>Smart assessment</b><small>Powered by a machine learning model</small></div></div>
+            <div class="side-stat"><span class="stat-icon">◷</span><div><b>Quick response</b><small>Your result appears in moments</small></div></div>
+            <div class="disclaimer">This tool provides an educational estimate, not a credit decision or guarantee of loan approval.</div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 FORMA</span>
+        <span>BUILT FOR BETTER FINANCIAL CLARITY</span>
+        <span class="footer-status"><i></i> API CONNECTED WHEN RUNNING LOCALLY</span>
+      </footer>
+    </main>
+  </div>
+
+  <div class="result-overlay" id="resultOverlay" aria-hidden="true">
+    <div class="result-card" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+      <button class="close-result" id="closeResult" aria-label="Close result">×</button>
+      <div class="result-kicker">YOUR ELIGIBILITY ESTIMATE</div>
+      <div class="result-symbol" id="resultSymbol">✳</div>
+      <h2 id="resultTitle">Your result is ready.</h2>
+      <p class="result-description" id="resultDescription"></p>
+      <div class="probability-block">
+        <div class="probability-top"><span>Approval probability</span><b id="probabilityValue">—</b></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <small>Model-estimated probability of approval</small>
+      </div>
+      <div class="result-footnote">This is an automated model estimate and should not be treated as a lender's final decision.</div>
+      <button class="secondary-button" id="tryAgain">Review my details <span>↗</span></button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
